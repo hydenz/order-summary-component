@@ -1,0 +1,154 @@
+:root {
+  --blue-100: hsl(225, 100%, 98%);
+  --blue-200: hsl(225, 100%, 94%);
+  --blue-300: hsl(224, 23%, 55%);
+  --blue-400: hsl(245, 75%, 52%);
+  --blue-500: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  background-image: url('images/pattern-background-mobile.svg');
+  background-position: 0 -310px;
+  background-size: 100% 100%;
+  background-color: var(--blue-200);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 7rem 2.4rem;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url('images/pattern-background-desktop.svg');
+    background-size: initial;
+    background-position: 0 -30px;
+  }
+}
+
+.card {
+  border-radius: 5px;
+}
+
+.card__illustration {
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(360, 100%, 100%, 1);
+  padding-inline: calc(1.5rem + 2.3vw);
+  padding-block: calc(2.8rem + 1.1vw) calc(2.4rem + 1.7vw);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 35px 30px -11px #c7d0f7;
+}
+
+.card__header {
+  font-weight: 900;
+  color: var(--blue-500);
+  font-size: calc(2rem + 0.55vw);
+}
+
+.card__desc {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: calc(1.5rem + 0.07vw);
+  color: var(--blue-300);
+  max-width: calc(25ch + 1.7vw);
+  line-height: calc(2.5rem + 0.05vw);
+}
+
+.card__desc::first-letter {
+  margin-right: 0.2rem;
+}
+
+.card__plan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--blue-100);
+  padding: calc(1.6rem + 0.6vw);
+  margin-top: 2.1rem;
+  border-radius: 12px;
+}
+
+.card__plan__info {
+  margin-left: 2rem;
+  font-size: calc(1.35rem + 0.15vw);
+}
+
+.card__plan__time {
+  color: var(--blue-500);
+  font-weight: 900;
+}
+
+.card__plan__price {
+  margin-top: 0.5vw;
+  color: var(--blue-300);
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+}
+
+.card button {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.card button:hover {
+  cursor: pointer;
+}
+
+.card__plan__btn {
+  margin-left: auto;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: var(--blue-400);
+  font-size: calc(1.3rem + 0.07vw);
+  font-weight: 700;
+}
+
+.card__proceed {
+  background-color: var(--blue-400);
+  color: hsla(360, 100%, 100%, 1);
+  width: 100%;
+  margin-top: calc(2.1rem + 0.7vw);
+  text-align: center;
+  padding: 1.45rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0px 20px 18px -2px rgba(56, 41, 224, 0.2);
+}
+
+.card__proceed:hover,
+.card__plan__btn:hover {
+  opacity: 0.65;
+  text-decoration: none;
+}
+
+.card__cancel {
+  margin-top: calc(2.3rem + 0.5vw);
+  color: var(--blue-300);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card__cancel:hover {
+  color: var(--blue-500);
+}
