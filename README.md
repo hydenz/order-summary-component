@@ -49,4 +49,3 @@ Desktop Screenshot
 ## Author
 
 - Frontend Mentor - [@hydenz](https://www.frontendmentor.io/profile/hydenz)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
